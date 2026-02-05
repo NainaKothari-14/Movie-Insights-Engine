@@ -725,7 +725,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Author
 
 **Your Name**  
-GitHub: [@yourusername](https://github.com/NainaKothari-14)
+GitHub: [@NainaKothari-14](https://github.com/NainaKothari-14)
 
 ---
 
