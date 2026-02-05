@@ -13,6 +13,77 @@ CinePulse is a **movie analytics dashboard** that demonstrates how to build a Ne
 
 This is a learning project that shows how streaming platforms analyze user behavior, track trending content, and segment viewers—all using MongoDB's powerful aggregation framework.
 
+## Quick Start
+
+**Prerequisites:**
+- Node.js 16+ and npm
+- MongoDB 5.0+ (running locally or cloud)
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/yourusername/cinepulse.git
+cd cinepulse
+```
+
+**2. Install backend dependencies**
+```bash
+cd backend
+npm install
+```
+
+**3. Set up environment variables**
+
+Create a `.env` file in the `backend` directory:
+```env
+MONGODB_URI=mongodb://localhost:27017/cinepulse
+PORT=5000
+NODE_ENV=development
+```
+
+**4. Seed the database** (optional but recommended)
+```bash
+npm run seed
+```
+This creates sample viewing sessions, movies, and user data.
+
+**5. Start the backend server**
+```bash
+npm run dev
+```
+Backend runs at `http://localhost:5000`
+
+**6. Start the frontend** (in a new terminal, from project root)
+```bash
+cd frontend
+npm install
+npm start
+```
+Frontend runs at `http://localhost:3000`
+
+**7. Open your browser**
+
+Navigate to `http://localhost:3000` to see the dashboard!
+
+---
+
+## Available Scripts
+
+**Backend:**
+```bash
+npm run dev        # Start with nodemon (development)
+npm start          # Start production server
+npm run seed       # Seed database with sample data
+```
+
+**Frontend:**
+```bash
+npm start          # Start development server
+npm run build      # Build for production
+npm test           # Run tests
+```
+
+---
+
 ## What You'll See
 
 The application transforms viewing session data like:
@@ -66,6 +137,28 @@ This project demonstrates the **backend analytics logic** that powers these insi
 - Dark theme with gradient overlays
 - Responsive, mobile-first design
 - Netflix-inspired cinematography
+
+## Screenshots
+
+### Homepage - Netflix-Style Hero Section
+<img src="screenshots/HomePAge.png" alt="Homepage" width="700"/>
+
+*Dynamic hero section with cinematic backgrounds and trending movies*
+
+### Analytics Dashboard
+<img src="screenshots/Dashboard.png" alt="Dashboard" width="700"/>
+
+*Real-time KPIs and interactive charts showing trending content and genre popularity*
+
+### Insights Query Builder
+<img src="screenshots/InsightPage.png" alt="Insights" width="700"/>
+
+*Custom query builder for ad-hoc analysis with MongoDB aggregation pipelines*
+
+### Advanced Analytics
+<img src="screenshots/Analytics.png" alt="Analytics" width="700"/>
+
+*Deep dive into viewer behavior and content performance*
 
 ## Data Model
 
@@ -134,79 +227,6 @@ db.movies.createIndex({ genres: 1 })
 - `genres`: Speeds up genre-based aggregations
 
 These indexes are chosen specifically to optimize the most common aggregation pipelines in the application.
-
-## Quick Start
-
-**Prerequisites:**
-- Node.js 16+ and npm
-- MongoDB 5.0+ (running locally or cloud)
-
-**1. Clone the repository**
-```bash
-git clone https://github.com/yourusername/cinepulse.git
-cd cinepulse
-```
-
-**2. Install backend dependencies**
-```bash
-cd backend
-npm install
-```
-
-**3. Set up environment variables**
-
-Create a `.env` file in the `backend` directory:
-```env
-MONGODB_URI=mongodb://localhost:27017/cinepulse
-PORT=5000
-NODE_ENV=development
-```
-
-**4. Seed the database** (optional but recommended)
-```bash
-npm run seed
-```
-This creates sample viewing sessions, movies, and user data.
-
-**5. Start the backend server**
-```bash
-npm run dev
-```
-Backend runs at `http://localhost:5000`
-
-**6. Start the frontend** (in a new terminal, from project root)
-```bash
-cd frontend
-npm install
-npm start
-```
-Frontend runs at `http://localhost:3000`
-
-**7. Open your browser**
-
-Navigate to `http://localhost:3000` to see the dashboard!
-
-## Screenshots
-
-### Homepage - Netflix-Style Hero Section
-<img src="screenshots/HomePAge.png" alt="Homepage" width="700"/>
-
-*Dynamic hero section with cinematic backgrounds and trending movies*
-
-### Analytics Dashboard
-<img src="screenshots/Dashboard.png" alt="Dashboard" width="700"/>
-
-*Real-time KPIs and interactive charts showing trending content and genre popularity*
-
-### Insights Query Builder
-<img src="screenshots/InsightPage.png" alt="Insights" width="700"/>
-
-*Custom query builder for ad-hoc analysis with MongoDB aggregation pipelines*
-
-### Advanced Analytics
-<img src="screenshots/Analytics.png" alt="Analytics" width="700"/>
-
-*Deep dive into viewer behavior and content performance*
 
 ## How Aggregation Works (Examples)
 
@@ -680,22 +700,6 @@ The focus is on:
 - **Realistic product analytics** use-cases found in production systems
 
 Most projects stop at "list movies, add users, basic CRUD." This project answers the next-level questions that drive business decisions.
-
-## Available Scripts
-
-**Backend:**
-```bash
-npm run dev        # Start with nodemon (development)
-npm start          # Start production server
-npm run seed       # Seed database with sample data
-```
-
-**Frontend:**
-```bash
-npm start          # Start development server
-npm run build      # Build for production
-npm test           # Run tests
-```
 
 ## Contributing
 
