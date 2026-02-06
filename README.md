@@ -1,6 +1,6 @@
 # CinePulse - Movie Analytics Dashboard
 
-> A modern streaming analytics platform powered by MongoDB aggregations and React
+> A modern streaming analytics platform powered by MongoDB aggregations and React  
 
 [![MongoDB](https://img.shields.io/badge/MongoDB-Aggregation-47A248?style=flat&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![Node.js](https://img.shields.io/badge/Node.js%20%7C%20Express-339933?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)
