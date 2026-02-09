@@ -7,7 +7,10 @@ const PORT = process.env.PORT || 5000;
 async function start() {
   await connectDB(process.env.MONGO_URI);
   const app = createApp();
-  app.listen(PORT, () => console.log(`✅ API on http://localhost:${PORT}`));
+
+  app.listen(PORT, () => {
+    console.log(`✅ API running on port ${PORT}`);
+  });
 }
 
 start().catch((e) => {
